@@ -1,0 +1,30 @@
+.menu-component {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .menu-items {
+        .menu-link {
+            text-decoration: none;
+            &-btn {
+                color: #fff;
+                font-size: 24px;
+                .p-button-icon {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .tweetle-btn {
+        background-color: rgb(29, 155, 240);
+        transform: all linear 0.5s;
+        width: 100%;
+        border-radius: 50px;
+        margin-top: 10px;
+        font-size: 18px;
+        &:hover {
+            background-color: rgb(26, 140, 216);
+        }
+    }
+    
+}
