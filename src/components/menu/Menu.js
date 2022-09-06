@@ -1,39 +1,54 @@
-import React from 'react'
-import "./menu.scss"
-import { Link } from 'react-router-dom'
-import { Button } from 'primereact/button';
+import React, { useState } from "react";
+import "./menu.scss";
+import { Link } from "react-router-dom";
+import { Button } from "primereact/button";
 
 export default function Menu() {
-
-    const menuItems = [
-        {label: "", icon: "pi pi-twitter", path: "/" },
-        {label: "Home", icon: "pi pi-home", path: "/"},
-        {label: "Discover", icon: "pi pi-hashtag", path: "/discover"},
-        {label: "Notifications", icon: "pi pi-bell", path: "/notifications"},
-        {label: "Messages", icon: "pi pi-home", path: "/messages"},
-        {label: "Bookmarks", icon: "pi pi-bookmark", path: "/bookmarks"},
-        {label: "Lists", icon: "pi pi-list", path: "/lists"},
-        {label: "Profile", icon: "pi pi-user", path: "/profile"},
-        {label: "More", icon: "pi pi-bookmark", path: "/more"},
-    ]
+  const menuItems = [
+    { id: 0, label: "", icon: "pi pi-twitter", path: "/" },
+    { id: 1,label: "Home", icon: "pi pi-home", path: "/" },
+    { id: 2, label: "Discover", icon: "pi pi-hashtag", path: "/discover" },
+    { id: 3, label: "Notifications", icon: "pi pi-bell", path: "/notifications" },
+    { id: 4, label: "Messages", icon: "pi pi-home", path: "/messages" },
+    { id: 5, label: "Bookmarks", icon: "pi pi-bookmark", path: "/bookmarks" },
+    { id: 6, label: "Lists", icon: "pi pi-list", path: "/lists" },
+    { id: 7, label: "Profile", icon: "pi pi-user", path: "/profile" },
+    { id: 8, label: "More", icon: "pi pi-bookmark", path: "/more" },
+  ];
   return (
-    <div className='menu-component'>
-        <div className='menu-list'>
-          {
-            menuItems.map((item) => {
-              return (
-                <div className='menu-items'>
-                  <Link to={item.path} className='menu-link'>
-                    <Button label={item.label} icon={item.icon} className="p-button-text menu-link-btn" />
-                  </Link>
-                </div>
-              )
-            })
-          }
-          <Button className='tweetle-btn' label='Tweetle' />
-          
-            
+    <div className="menu-component">
+      <div className="menu-content">
+        <div className="menu-list">
+          {menuItems.map((item) => {
+            return (
+              <div className="menu-items" key={item.id}>
+                <Link to={item.path} className="menu-link">
+                  <Button
+                    label={item.label}
+                    icon={item.icon}
+                    className="p-button-text menu-link-btn"
+                  />
+                </Link>
+              </div>
+            );
+          })}
         </div>
+
+        <Button className="tweetle-btn" label="Tweetle" />
+
+        <div className="menu-footer-container">
+          <div className="menu-footer">
+            <div className="menu-footer-pic">
+              <img className="profile-pic" src="images/profile-pic.jfif" />
+            </div>
+            <div className="menu-footer-text">
+              <p className="name">Bekir Can Ata</p>
+              <p className="username">@BekirCanAta</p>
+            </div>
+            <div className="menu-footer-icon">...</div>
+          </div>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
