@@ -1,0 +1,41 @@
+.overlaypanel-demo {
+  background-color: #000000;
+  border-radius: 20px;
+  box-shadow: 0 0 14px 1px #2e2e2e; /* outer cyan */
+
+  .p-overlaypanel-content {
+    padding: 0;
+  }
+
+  .menu-footer-container {
+    margin-top: 0;
+    cursor: default;
+    &:hover {
+      background-color: #000000;
+    }
+    .menu-footer {
+      &-pic {
+        width: 60px;
+        height: 60px;
+      }
+      &-icon {
+        color: #1674b4;
+        margin-right: 10px;
+      }
+    }
+  }
+  .divider {
+    border-bottom: 1px solid #71767b;
+  }
+  .overlaypanel-content {
+    margin-bottom: 20px;
+    .overlaypanel-items {
+      color: #fff;
+      padding: 15px;
+      cursor: pointer;
+      &:hover {
+        background-color: #181818;
+      }
+    }
+  }
+}
