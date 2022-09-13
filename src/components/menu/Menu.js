@@ -42,13 +42,15 @@ export default function Menu() {
         <div className="menu-footer-container" onClick={(e) => op.current.toggle(e)}>
           <div className="menu-footer">
             <div className="menu-footer-pic">
-              <img className="profile-pic" src="images/profile-pic.jfif" />
+              <img className="circle-image" src="images/profile-pic.jfif" />
             </div>
             <div className="menu-footer-text">
               <p className="name">Bekir Can Ata</p>
               <p className="username">@BekirCanAta</p>
             </div>
-            <div className="menu-footer-icon">...</div>
+            <div className="menu-footer-icon">
+              <i className="pi pi-ellipsis-h"></i>
+            </div>
           </div>
         </div>
         
