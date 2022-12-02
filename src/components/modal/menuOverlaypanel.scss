@@ -1,4 +1,4 @@
-.overlaypanel-demo {
+.overlaypanel {
   background-color: #000000;
   border-radius: 20px;
   box-shadow: 0 0 14px 1px #2e2e2e; /* outer cyan */
@@ -24,11 +24,9 @@
       }
     }
   }
-  .divider {
-    border-bottom: 1px solid #71767b;
-  }
   .overlaypanel-content {
-    margin-bottom: 20px;
+    margin-top: 20px;
+    border-top: 1px solid rgb(47, 51, 54);
     .overlaypanel-items {
       color: #fff;
       padding: 15px;
@@ -38,4 +36,8 @@
       }
     }
   }
+}
+
+.p-overlaypanel.p-overlaypanel-flipped:after, .p-overlaypanel.p-overlaypanel-flipped:before  {
+  border-top-color: #000 !important;
 }
