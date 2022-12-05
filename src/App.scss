@@ -5,3 +5,9 @@
     object-fit: cover;
     
 }
+ // - GLOBAL INPUT TEXT
+.global-input-text {
+    &:enabled:focus {
+        box-shadow: none;
+    }
+}

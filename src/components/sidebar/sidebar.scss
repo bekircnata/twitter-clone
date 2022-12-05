@@ -1,0 +1,23 @@
+.sidebar-comoponent {
+
+    .sidebar-component-searchbar {
+        margin-top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            width: 75%;
+            .search-input {
+                border-radius: 50px !important;
+                width: 100%;
+                background-color: #202327;
+                color: #676C71;
+                border-color: #202327;
+                &:focus {
+                    border-color: #1987D2 !important;
+                }
+            }
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSmile, faImage, faChartBar, faCalendar } from '@fortawesome/free-regular-svg-icons'
+import { faSmile, faImage, faChartBar, faCalendar, faGif } from '@fortawesome/free-regular-svg-icons'
 import React from 'react'
 import "./Home.scss"
 import { Button } from 'primereact/button'
