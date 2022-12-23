@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./sidebar.scss";
 
 import { InputText } from "primereact/inputtext";
+import Trends from "./Trends";
 
 export default function Sidebar() {
   const [searchText, setSearchText] = useState(null);
   const [isFocus, setIsFocus] = useState(null);
 
   return (
-    <div className="sidebar-comoponent">
+    <div className="sidebar-component">
       <div className="sidebar-component-searchbar">
         <span className="p-input-icon-left">
           <i
@@ -24,6 +25,9 @@ export default function Sidebar() {
             placeholder="Search"
           />
         </span>
+      </div>
+      <div className="sidebar-component-trends">
+        <Trends />
       </div>
     </div>
   );

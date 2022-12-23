@@ -11,3 +11,15 @@
         box-shadow: none;
     }
 }
+
+// - GLOBAL BUTTONS
+.three-dot-button {
+    color: rgb(113, 118, 123) !important;
+    &:hover {
+        color: #1D6494 !important;
+    }
+}
+.show-more-button {
+    color: #1E8DD8 !important;
+    display: flex;
+}
