@@ -3,6 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 20px;
     .menu-items {
         .menu-link {
             text-decoration: none;
@@ -38,11 +40,13 @@
 }
 
 .menu-footer-container {
-    margin-top: 50px;
+    margin-top: 100%;
     cursor: pointer;
     transition: all 0.3s linear;
     padding: 20px 10px;
     width: 120%;
+    position: sticky;
+    bottom: 20px;
     &:hover {
         background-color: #181818;
     }
