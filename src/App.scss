@@ -13,6 +13,12 @@
 }
 
 // - GLOBAL BUTTONS
+.global-text-button {
+    &:hover {
+        background-color: inherit !important;
+        color: #fff !important;
+    }
+}
 .three-dot-button {
     color: rgb(113, 118, 123) !important;
     &:hover {

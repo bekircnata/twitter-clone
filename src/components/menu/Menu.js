@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import "./menu.scss";
 
-import MenuOverlaypanel from "../modal/MenuOverlaypanel";
+import MenuOverlaypanel from ".//MenuOverlaypanel";
 
 import { Button } from "primereact/button";
 
@@ -44,7 +44,7 @@ export default function Menu() {
         <div className="menu-footer-container" onClick={(e) => op.current.toggle(e)}>
           <div className="menu-footer">
             <div className="menu-footer-pic">
-              <img className="circle-image" src="images/profile-pic.jfif" />
+              <img className="circle-image" src="images/profile-pic.jfif" alt="profile-pic" />
             </div>
             <div className="menu-footer-text">
               <p className="name">Bekir Can Ata</p>

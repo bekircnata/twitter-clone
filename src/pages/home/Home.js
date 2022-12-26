@@ -7,13 +7,13 @@ import { Button } from 'primereact/button'
 export default function Home() {
   return (
     <div className='home-page'>
+      <div className='tweet-box-header'>
+        <h2>Home</h2>
+      </div>
       <div className='tweet-box'>
-        <div className='tweet-box-header'>
-          <h2>Home</h2>
-        </div>
         <div className='tweet-box-content'>
           <div style={{width:"65px"}}>
-            <img className="circle-image" src="images/profile-pic.jfif" />
+            <img className="circle-image" src="images/profile-pic.jfif" alt='profile-pic' />
           </div>
           <div>
             <input type="text" placeholder="What's happening?"/>
