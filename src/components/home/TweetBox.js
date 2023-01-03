@@ -15,7 +15,7 @@ import {
 export default function TweetBox() {
   const op = useRef(null);
   const [tweetboxFocus, setTweetboxFocus] = useState(false);
-  const [replyButtonId, setReplyButtonId] = useState(null)
+  const [replyButtonId, setReplyButtonId] = useState(1)
 
   const overlaypanelItems = [
     { id: 1, icon: "pi pi-globe", label: "Everyone" },
