@@ -1,5 +1,6 @@
 import React from 'react'
 import TweetBox from '../../components/home/TweetBox'
+import TweetCard from '../../components/home/TweetCard'
 import "./Home.scss"
 
 
@@ -12,6 +13,9 @@ export default function Home() {
       </div>
       <div className='tweet-box'>
         <TweetBox />
+      </div>
+      <div className='tweet-card-container'>
+        <TweetCard />
       </div>
     </div>
   )

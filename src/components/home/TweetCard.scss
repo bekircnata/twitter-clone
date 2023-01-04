@@ -1,0 +1,85 @@
+.tweet-card {
+    display: flex;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2f3336;
+
+    &-img {
+        width: 50px;
+        height: 50px;
+        background-color: #76C7CF;
+        padding: 15px;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    &-header {
+        display: flex;
+        align-items: flex-start;
+
+        &-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        &-username, &-date, &-ellipsis {
+            color: rgb(113, 118, 123);
+        }
+        &-ellipsis {
+            margin-left: auto;
+            margin-right: 20px;
+            padding: 0 !important;
+            span {
+                color: rgb(113, 118, 123);
+            }
+        }
+    }
+
+    &-content {
+        margin-top: 5px;
+    }
+    
+    &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 100px;
+        margin-top: 10px;
+
+        &-icon {
+            padding: 3px;
+
+            &:hover {
+                background-color: #071A14 !important;
+            }
+
+            span, i {
+                font-size: 14px;
+                color: rgb(113, 118, 123);
+    
+            }
+            i {
+                margin-right: 5px;
+            }
+        }
+
+        .view-btn:hover, .reply-btn:hover, .share-btn:hover {
+            span {
+                color: #1D9BF0;
+            }
+        }
+        .retweet-btn:hover {
+            span {
+                color: #00BA7C;
+            }
+        }
+        .like-btn:hover {
+            span {
+                color: #EC177A
+            }
+        }
+
+
+    }
+}
