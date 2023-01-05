@@ -5,7 +5,7 @@ import { InputText } from "primereact/inputtext";
 import Trends from "./Trends";
 
 export default function Sidebar() {
-  const [searchText, setSearchText] = useState(null);
+  const [searchText, setSearchText] = useState("");
   const [isFocus, setIsFocus] = useState(null);
 
   return (

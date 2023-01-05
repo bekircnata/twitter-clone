@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
 import { classNames } from "primereact/utils";
+import { InputText } from "primereact/inputtext";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,7 +16,8 @@ import {
 export default function TweetBox() {
   const op = useRef(null);
   const [tweetboxFocus, setTweetboxFocus] = useState(false);
-  const [replyButtonId, setReplyButtonId] = useState(1)
+  const [replyButtonId, setReplyButtonId] = useState(1);
+  const [tweetText, setTweetText] = useState("");
 
   const overlaypanelItems = [
     { id: 1, icon: "pi pi-globe", label: "Everyone" },
@@ -23,7 +25,9 @@ export default function TweetBox() {
     { id: 3, icon: "pi pi-at", label: "Only people you mention" },
   ];
   const replyButtonTemplate = () => {
-    let buttonTemplate = overlaypanelItems.filter((item) => item.id === replyButtonId)
+    let buttonTemplate = overlaypanelItems.filter(
+      (item) => item.id === replyButtonId
+    );
     return (
       <Button
         icon={buttonTemplate[0]?.icon}
@@ -32,12 +36,11 @@ export default function TweetBox() {
         style={{ outline: "none", border: "none" }}
         onClick={(e) => op.current.toggle(e)}
       />
-    )
-  }
+    );
+  };
 
   return (
     <div>
-
       <div className="tweet-box-content">
         <div style={{ width: "65px" }}>
           <img
@@ -47,16 +50,20 @@ export default function TweetBox() {
           />
         </div>
         <div className="w-full">
-          <input
-            type="text"
+          <InputText
+            value={tweetText}
             placeholder="What's happening?"
             onFocus={(e) => setTweetboxFocus(true)}
+            onChange={(e) => setTweetText(e.target.value)}
             style={tweetboxFocus ? { outline: "none" } : { outline: "none" }}
           />
           {tweetboxFocus ? (
             <div className="mt-4">
               {replyButtonTemplate()}
-              <div className="ml-3 mb-4" style={{ borderTop: "1px solid #2f3336", width: "90%" }} />
+              <div
+                className="ml-3 mb-4"
+                style={{ borderTop: "1px solid #2f3336", width: "90%" }}
+              />
             </div>
           ) : null}
         </div>
@@ -73,7 +80,7 @@ export default function TweetBox() {
 
         <Button className="tweetle-btn" label="Tweetle" />
       </div>
-      
+
       {/* OverlayPanel */}
       <div>
         <OverlayPanel
@@ -95,22 +102,23 @@ export default function TweetBox() {
           >
             {overlaypanelItems?.map((item) => {
               return (
-                <Button
-                  className="overlaypanel-items global-text-button p-button-text w-full"
-                  onClick={(e) => {
-                    setReplyButtonId(item?.id)
-                    op.current.toggle(e)
-                  }}
-                >
-                  <i className={classNames(item?.icon, "tweetbox-overlaypanel-icon")}></i>
-                  <span>{item?.label}</span>
-                </Button>
+                <div key={item?.id}>
+                  <Button
+                    className="overlaypanel-items global-text-button p-button-text w-full"
+                    onClick={(e) => {
+                      setReplyButtonId(item?.id);
+                      op.current.toggle(e);
+                    }}
+                  >
+                    <i className={classNames(item?.icon, "tweetbox-overlaypanel-icon")}></i>
+                    <span>{item?.label}</span>
+                  </Button>
+                </div>
               );
             })}
           </div>
         </OverlayPanel>
       </div>
-
     </div>
   );
 }
