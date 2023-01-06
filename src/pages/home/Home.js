@@ -3,7 +3,6 @@ import TweetBox from '../../components/home/TweetBox'
 import TweetCard from '../../components/home/TweetCard'
 import "./Home.scss"
 
-
 export default function Home() {
 
   // Tweet Listesini state olarak tanımlıyorum böylece yeni tweet eklediğimde sayfa render olup twwetim ekranda görünecek.

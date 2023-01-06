@@ -59,7 +59,7 @@ export default function TweetCard({ tweetList }) {
               </div>
             </div>
           </div>
-        );
+        )
       })}
     </div>
   );
