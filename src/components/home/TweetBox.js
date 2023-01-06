@@ -13,7 +13,7 @@ import {
   faCalendar,
 } from "@fortawesome/free-regular-svg-icons";
 
-export default function TweetBox() {
+export default function TweetBox({ tweetList, setTweetList }) {
   const op = useRef(null);
   const [tweetboxFocus, setTweetboxFocus] = useState(false);
   const [replyButtonId, setReplyButtonId] = useState(1);
@@ -39,13 +39,34 @@ export default function TweetBox() {
     );
   };
 
+  const addTweet = async() => {
+    const addedTweet =  {
+      Id: tweetList.length + 1,
+      image: "images/profile-pic-1.jfif",
+      title: "Bekir Can Ata",
+      username: "@BekirCanAta",
+      date: new Date().toDateString(),
+      content: tweetText,
+      view: " ",
+      reply: " ",
+      retweet: " ",
+      like: " ",
+    }
+
+    const tweetListArr = []
+    tweetList?.map((item) => tweetListArr.push(item) )
+    tweetListArr.push(addedTweet)
+    setTweetList(tweetListArr)
+    setTweetText("")
+  }
+
   return (
     <div>
       <div className="tweet-box-content">
         <div style={{ width: "65px" }}>
           <img
             className="circle-image"
-            src="images/profile-pic.jfif"
+            src="images/profile-pic-1.jfif"
             alt="profile-pic"
           />
         </div>
@@ -78,7 +99,7 @@ export default function TweetBox() {
           <i className="pi pi-map-marker icon"></i>
         </div>
 
-        <Button className="tweetle-btn" label="Tweetle" />
+        <Button className="tweetle-btn" label="Tweetle" onClick={(e) => addTweet()} />
       </div>
 
       {/* OverlayPanel */}
