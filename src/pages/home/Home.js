@@ -144,7 +144,7 @@ export default function Home() {
   }, [])
   
   return (
-    <div className='home-page'>
+    <div className='home-page h-full'>
       <div className='tweet-box-header'>
         <h2>Home</h2>
       </div>

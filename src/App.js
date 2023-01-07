@@ -1,7 +1,6 @@
 import "./App.scss"
 import RouterConfig from "./RouterConfig";
 
-import Home from "./pages/home/Home";
 import Menu from "./components/menu/Menu";
 import Sidebar from "./components/sidebar/Sidebar";
 
