@@ -10,7 +10,7 @@ export default function TweetCard({ tweetList }) {
         return (
           <div key={item?.Id} className="tweet-card">
               {
-                item?.image.length === 1 ? <div className="tweet-card-img">{item.image}</div> : <img src={item.image} />
+                item?.image.length === 1 ? <div className="tweet-card-img">{item.image}</div> : <img src={item.image} alt="" />
               }
             <div className="w-full">
               <div className="tweet-card-header">

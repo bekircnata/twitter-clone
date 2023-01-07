@@ -23,7 +23,8 @@ export default function TweetBox({ tweetList, setTweetList }) {
     { id: 1, icon: "pi pi-globe", label: "Everyone" },
     { id: 2, icon: "pi pi-user", label: "People you follow" },
     { id: 3, icon: "pi pi-at", label: "Only people you mention" },
-  ];
+  ]
+  // Seçilen seçeneğe ait butonun ekranda görünmesi için
   const replyButtonTemplate = () => {
     let buttonTemplate = overlaypanelItems.filter(
       (item) => item.id === replyButtonId
@@ -37,7 +38,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
         onClick={(e) => op.current.toggle(e)}
       />
     );
-  };
+  }
 
   const addTweet = async() => {
     const addedTweet =  {
@@ -55,7 +56,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
 
     const tweetListArr = []
     tweetList?.map((item) => tweetListArr.push(item) )
-    tweetListArr.push(addedTweet)
+    tweetListArr.unshift(addedTweet)
     setTweetList(tweetListArr)
     setTweetText("")
   }
@@ -63,6 +64,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
   return (
     <div>
       <div className="tweet-box-content">
+        
         <div style={{ width: "65px" }}>
           <img
             className="circle-image"
@@ -70,6 +72,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
             alt="profile-pic"
           />
         </div>
+
         <div className="w-full">
           <InputText
             value={tweetText}
@@ -140,6 +143,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
           </div>
         </OverlayPanel>
       </div>
+
     </div>
   );
 }

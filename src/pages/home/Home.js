@@ -4,16 +4,13 @@ import TweetCard from '../../components/home/TweetCard'
 import "./Home.scss"
 
 export default function Home() {
-
-  // Tweet Listesini state olarak tanımlıyorum böylece yeni tweet eklediğimde sayfa render olup twwetim ekranda görünecek.
+  
   const [tweetList, setTweetList] = useState(null)
-  console.log(tweetList)
 
   // Dummy data olarak hazırladığım tweet listesi
-  // Direkt state içinde tanmımlamama sebebim olusturmus olduğum dummy liste uzerine eklediğim tweet'i pushlicam"
   const tweetListArr = [
     {
-      Id: 1,
+      Id: 10,
       image: "A",
       title: "Test User",
       username: "@testuser",
@@ -26,7 +23,7 @@ export default function Home() {
       like: "3",
     },
     {
-      Id: 2,
+      Id: 9,
       image: "T",
       title: "Test User 1",
       username: "@testuser1",
@@ -38,7 +35,7 @@ export default function Home() {
       like: " ",
     },
     {
-      Id: 3,
+      Id: 8,
       image: "E",
       title: "Test User 2",
       username: "@testuser2",
@@ -50,7 +47,7 @@ export default function Home() {
       like: " ",
     },
     {
-      Id: 4,
+      Id: 7,
       image: "R",
       title: "Test User 3",
       username: "@testuser3",
@@ -63,7 +60,7 @@ export default function Home() {
       like: "50",
     },
     {
-      Id: 5,
+      Id: 6,
       image: "T",
       title: "Test User 4",
       username: "@testuser4",
@@ -76,7 +73,7 @@ export default function Home() {
       like: " ",
     },
     {
-      Id: 6,
+      Id: 5,
       image: "J",
       title: "Test User 5",
       username: "@testuser5",
@@ -89,7 +86,7 @@ export default function Home() {
       like: "3",
     },
     {
-      Id: 7,
+      Id: 4,
       image: "Z",
       title: "Test User 6",
       username: "@testuser6",
@@ -102,7 +99,7 @@ export default function Home() {
       like: "55",
     },
     {
-      Id: 8,
+      Id: 3,
       image: "E",
       title: "Test User 7",
       username: "@testuser7",
@@ -115,7 +112,7 @@ export default function Home() {
       like: " ",
     },
     {
-      Id: 9,
+      Id: 2,
       image: "X",
       title: "Test User 8",
       username: "@testuser8",
@@ -128,7 +125,7 @@ export default function Home() {
       like: "56",
     },
     {
-      Id: 10,
+      Id: 1,
       image: "Y",
       title: "Test User 9",
       username: "@testuser9",
@@ -143,15 +140,8 @@ export default function Home() {
   ]
 
   useEffect(() => {
-    console.log("first")
     setTweetList(tweetListArr)
   }, [])
-
-  useEffect(() => {
-    if(tweetList) {
-      setTweetList(tweetList)
-    }
-  }, [tweetList])
   
   return (
     <div className='home-page'>
