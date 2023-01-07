@@ -4,14 +4,14 @@ import TweetCard from '../../components/home/TweetCard'
 import "./Home.scss"
 
 export default function Home() {
-  
+
   const [tweetList, setTweetList] = useState(null)
 
   // Dummy data olarak hazırladığım tweet listesi
   const tweetListArr = [
     {
       Id: 10,
-      image: "A",
+      image: "/images/random-user-profile-pic-4.jpg",
       title: "Test User",
       username: "@testuser",
       date: "Dec 30, 20222",
@@ -24,7 +24,7 @@ export default function Home() {
     },
     {
       Id: 9,
-      image: "T",
+      image: "/images/random-user-profile-pic-5.jpg",
       title: "Test User 1",
       username: "@testuser1",
       date: "Dec 37, 20222",
@@ -74,7 +74,7 @@ export default function Home() {
     },
     {
       Id: 5,
-      image: "J",
+      image: "/images/random-user-profile-pic-3.jpg",
       title: "Test User 5",
       username: "@testuser5",
       date: "Dec 23, 20222",
@@ -100,7 +100,7 @@ export default function Home() {
     },
     {
       Id: 3,
-      image: "E",
+      image: "/images/random-user-profile-pic-2.jpg",
       title: "Test User 7",
       username: "@testuser7",
       date: "Dec 22, 20222",
@@ -126,7 +126,7 @@ export default function Home() {
     },
     {
       Id: 1,
-      image: "Y",
+      image: "/images/random-user-profile-pic-1.jfif",
       title: "Test User 9",
       username: "@testuser9",
       date: "Dec 20, 20222",
