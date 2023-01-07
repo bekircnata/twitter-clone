@@ -64,7 +64,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
   return (
     <div>
       <div className="tweet-box-content">
-        
+
         <div style={{ width: "65px" }}>
           <img
             className="circle-image"
@@ -102,7 +102,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
           <i className="pi pi-map-marker icon"></i>
         </div>
 
-        <Button className="tweetle-btn" label="Tweetle" onClick={(e) => addTweet()} />
+        <Button className="tweetle-btn" label="Tweetle" disabled={tweetText.length === 0} onClick={(e) => addTweet()} />
       </div>
 
       {/* OverlayPanel */}
