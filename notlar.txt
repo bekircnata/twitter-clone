@@ -1,1 +1,1 @@
-06.01.2023 - Tweet ekleme geliştirmesi eklendi fakat sıralama işlemi yapılmadı. Son eklenen tweet en üstte görünmeli
+Next to do: Who to follow kartı yapılacak.
