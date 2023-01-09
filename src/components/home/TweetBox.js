@@ -101,8 +101,14 @@ export default function TweetBox({ tweetList, setTweetList }) {
           <FontAwesomeIcon icon={faCalendar} className="icon" />
           <i className="pi pi-map-marker icon"></i>
         </div>
-
-        <Button className="tweetle-btn" label="Tweetle" disabled={tweetText.length === 0} onClick={(e) => addTweet()} />
+        <div className="flex align-items-center">
+          {
+            tweetText.length !== 0 ? (
+              <span className="mr-3 tweet-length-text" style={ tweetText.length >= 280 ? {color: "#E8222F"} : {color: "rgb(113, 118, 123)"}}>{tweetText.length}</span>
+            ) : ("")
+          }
+          <Button className="tweetle-btn" label="Tweetle" disabled={tweetText.length === 0 || tweetText.length >= 280} onClick={(e) => addTweet()} />
+        </div>
       </div>
 
       {/* OverlayPanel */}
