@@ -18,7 +18,7 @@ export default function Menu() {
     { id: 5, label: "Bookmarks", icon: "pi pi-bookmark", path: "/bookmarks" },
     { id: 6, label: "Lists", icon: "pi pi-list", path: "/lists" },
     { id: 7, label: "Profile", icon: "pi pi-user", path: "/profile" },
-    { id: 8, label: "More", icon: "pi pi-bookmark", path: "/more" },
+    { id: 8, label: "More", icon: "pi pi-ellipsis-h", path: "/more" },
   ];
   return (
     <div className="menu-component">
