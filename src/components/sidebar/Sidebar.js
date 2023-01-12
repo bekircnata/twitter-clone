@@ -22,7 +22,7 @@ export default function Sidebar() {
             onBlur={() => setIsFocus(false)}
             onChange={(e) => setSearchText(e.target.value)}
             className="global-input-text search-input"
-            placeholder="Search"
+            placeholder="Search Twitter"
           />
         </span>
       </div>
