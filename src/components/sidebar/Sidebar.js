@@ -3,6 +3,7 @@ import "./sidebar.scss";
 
 import { InputText } from "primereact/inputtext";
 import Trends from "./Trends";
+import WhoToFollowCard from "./WhoToFollowCard";
 
 export default function Sidebar() {
   const [searchText, setSearchText] = useState("");
@@ -28,6 +29,9 @@ export default function Sidebar() {
       </div>
       <div className="sidebar-component-trends">
         <Trends />
+      </div>
+      <div className="sidebar-component-who-to-follow-card">
+        <WhoToFollowCard />
       </div>
     </div>
   );

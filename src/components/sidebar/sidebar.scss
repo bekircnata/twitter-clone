@@ -22,7 +22,7 @@
     margin-top: 30px;
     display: flex;
     align-items: center;
-    
+
     .trends-component {
       background-color: #16181c;
       width: 60%;
@@ -48,6 +48,57 @@
               font-size: 14px;
               color: rgb(113, 118, 123);
             }
+          }
+        }
+      }
+    }
+  }
+
+  &-who-to-follow-card {
+    margin-top: 20px;
+    padding: 10px 0px;
+    background-color: #16181c;
+    width: 60%;
+    border-radius: 15px;
+    .who-to-follow-title {
+      padding-left: 15px;
+      font-weight: bolder;
+      font-size: 18px;
+    }
+    .list {
+      list-style: none;
+      padding: 0px 15px;
+      &-item {
+        display: flex;
+        align-items: center;
+        padding: 20px 0px;
+        &:hover {
+          background-color: #1d1f23;
+        }
+        &-image {
+          width: 50px;
+          height: 50px;
+          margin-right: 15px;
+        }
+        &-text-group {
+          &-name {
+            font-weight: bold;
+            font-size: 18px;
+          }
+          &-email {
+            color: rgb(113, 118, 123);;
+          }
+        }
+        &-button {
+          background-color: #fff;
+          color: #000;
+          border-radius: 50px;
+          margin-left: auto;
+          border: none;
+          &:hover {
+            background: #fff;
+            color: #000;
+            border: none;
           }
         }
       }
