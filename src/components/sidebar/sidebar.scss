@@ -90,16 +90,24 @@
           }
         }
         &-button {
-          background-color: #fff;
-          color: #000;
           border-radius: 50px;
           margin-left: auto;
           border: none;
+          padding: 5px 20px;
           &:hover {
             background: #fff;
             color: #000;
             border: none;
           }
+        }
+        .follow-btn {
+          background-color: #fff;
+          color: #000;
+        }
+        .unfollow-btn {
+          background-color: #331F24;
+          color: #D6212C;
+          border-color: #D6212C;
         }
       }
     }
