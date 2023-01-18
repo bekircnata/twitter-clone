@@ -1,1 +1,3 @@
-Next to do: Who to follow kartı yapılacak.
+Next To Do: Secili menuye active class'ı eklenecek.
+Next To Do: Tweet butonuna tıklanıldığında tweetbox'ın modal hali açılacak.
+Next To Do: Tweetbox altında yer alan görsel seçme ikonu çalışır hale getirilecek.
