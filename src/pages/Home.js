@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import TweetBox from '../../components/home/TweetBox'
-import TweetCard from '../../components/home/TweetCard'
+import TweetBox from '../components/home/TweetBox'
+import TweetCard from '../components/home/TweetCard'
 import "./Home.scss"
 
 export default function Home() {
