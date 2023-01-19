@@ -1,17 +1,19 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./menu.scss";
 
 import MenuOverlaypanel from ".//MenuOverlaypanel";
 
 import { Button } from "primereact/button";
+import { classNames } from "primereact/utils";
 
 export default function Menu() {
   const op = useRef(null)
+  const location = useLocation()
 
   const menuItems = [
     { id: 0, label: "", icon: "pi pi-twitter", path: "/" },
-    { id: 1,label: "Home", icon: "pi pi-home", path: "/" },
+    { id: 1, label: "Home", icon: "pi pi-home", path: "/" },
     { id: 2, label: "Explore", icon: "pi pi-hashtag", path: "/discover" },
     { id: 3, label: "Notifications", icon: "pi pi-bell", path: "/notifications" },
     { id: 4, label: "Messages", icon: "pi pi-home", path: "/messages" },
@@ -31,7 +33,7 @@ export default function Menu() {
                   <Button
                     label={item.label}
                     icon={item.icon}
-                    className="p-button-text menu-link-btn"
+                    className={location.pathname === item.path ? "p-button-text menu-link-btn menu-link-active" : "p-button-text menu-link-btn"}
                   />
                 </Link>
               </div>
