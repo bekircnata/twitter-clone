@@ -14,7 +14,7 @@ export default function Menu() {
   const menuItems = [
     { id: 0, label: "", icon: "pi pi-twitter", path: "/" },
     { id: 1, label: "Home", icon: "pi pi-home", path: "/" },
-    { id: 2, label: "Explore", icon: "pi pi-hashtag", path: "/discover" },
+    { id: 2, label: "Explore", icon: "pi pi-hashtag", path: "/explore" },
     { id: 3, label: "Notifications", icon: "pi pi-bell", path: "/notifications" },
     { id: 4, label: "Messages", icon: "pi pi-home", path: "/messages" },
     { id: 5, label: "Bookmarks", icon: "pi pi-bookmark", path: "/bookmarks" },
