@@ -1,4 +1,5 @@
 import React, { useRef, useState } from "react";
+import "./TweetBox.scss"
 
 import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
@@ -13,7 +14,7 @@ import {
   faCalendar,
 } from "@fortawesome/free-regular-svg-icons";
 
-export default function TweetBox({ tweetList, setTweetList }) {
+export default function TweetBox({ tweetList, setTweetList, type }) {
   const op = useRef(null);
   const [tweetboxFocus, setTweetboxFocus] = useState(false);
   const [replyButtonId, setReplyButtonId] = useState(1);
@@ -62,7 +63,7 @@ export default function TweetBox({ tweetList, setTweetList }) {
   }
 
   return (
-    <div>
+    <div className={ type === "dialog" ? "tweet-box" : "tweet-box  pl-7" }>
       <div className="tweet-box-content">
 
         <div style={{ width: "65px" }}>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import TweetBox from '../components/home/TweetBox'
+import TweetBox from '../components/TweetBox'
 import TweetCard from '../components/home/TweetCard'
 import "./Home.scss"
 
@@ -148,7 +148,7 @@ export default function Home() {
       <div className='tweet-box-header'>
         <h2>Home</h2>
       </div>
-      <div className='tweet-box'>
+      <div className='tweet-box-container'>
         <TweetBox tweetList={tweetList}  setTweetList={setTweetList} />
       </div>
       <div className='tweet-card-container'>
