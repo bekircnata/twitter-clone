@@ -1,5 +1,5 @@
 import { Button } from "primereact/button";
-import React, { useState } from "react";
+import React from "react";
 
 export default function WhoToFollowCard() {
 
@@ -56,7 +56,7 @@ export default function WhoToFollowCard() {
       <ul className="list">
         {whoToFollowListItem.map((item) => {
           return (
-            <li className="list-item">
+            <li className="list-item" key={item.Id}>
               <img
                 className="list-item-image circle-image"
                 src={item?.image}
