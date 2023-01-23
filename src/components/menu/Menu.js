@@ -8,7 +8,7 @@ import MenuOverlaypanel from "./MenuOverlaypanel";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 
-export default function Menu() {
+export default function Menu({ tweetList, setTweetList }) {
   const op = useRef(null);
   const location = useLocation();
 
@@ -94,7 +94,7 @@ export default function Menu() {
           onHide={() => setDisplayTweetBoxDialog(false)}
         >
           <div className="tweet-box">
-            <TweetBox type={"dialog"}/>
+            <TweetBox tweetList={tweetList} setTweetList={setTweetList} type={"dialog"} setDisplayTweetBoxDialog={setDisplayTweetBoxDialog} />
           </div>
         </Dialog>
       </div>
