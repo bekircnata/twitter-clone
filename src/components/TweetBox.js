@@ -4,7 +4,7 @@ import "./TweetBox.scss"
 import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
 import { classNames } from "primereact/utils";
-import { InputText } from "primereact/inputtext";
+import { InputTextarea } from 'primereact/inputtextarea';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -76,12 +76,15 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
         </div>
 
         <div className="w-full">
-          <InputText
+          <InputTextarea 
+            autoResize
+            rows={1} 
+            cols={50}
             value={tweetText}
             placeholder="What's happening?"
             onFocus={(e) => setTweetboxFocus(true)}
             onChange={(e) => setTweetText(e.target.value)}
-            style={tweetboxFocus ? { outline: "none" } : { outline: "none" }}
+            style={tweetboxFocus ? { outline: "none" } : { outline: "none", whiteSpace: "normal" }}
           />
           {tweetboxFocus ? (
             <div className="mt-4">
