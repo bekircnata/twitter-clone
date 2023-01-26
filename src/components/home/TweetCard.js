@@ -12,7 +12,7 @@ export default function TweetCard({ tweetList }) {
               {
                 item?.image.length === 1 ? <div className="tweet-card-img">{item.image}</div> : <img src={item.image} alt="" />
               }
-            <div className="w-full">
+            <div style={{width: "90%"}}>
               <div className="tweet-card-header">
                 <span className="tweet-card-header-title">{item?.title}</span>
                 <span className="tweet-card-header-username">
