@@ -3,16 +3,17 @@ import React from "react";
 import "./TweetCard.scss";
 
 export default function TweetCard({ tweetList }) {
-
   return (
     <div className="ml-3">
       {tweetList?.map((item) => {
         return (
           <div key={item?.Id} className="tweet-card">
-              {
-                item?.image.length === 1 ? <div className="tweet-card-img">{item.image}</div> : <img src={item.image} alt="" />
-              }
-            <div style={{width: "90%"}}>
+            {item?.image.length === 1 ? (
+              <div className="tweet-card-img">{item.image}</div>
+            ) : (
+              <img src={item.image} alt="" />
+            )}
+            <div style={{ width: "90%" }}>
               <div className="tweet-card-header">
                 <span className="tweet-card-header-title">{item?.title}</span>
                 <span className="tweet-card-header-username">
@@ -59,7 +60,7 @@ export default function TweetCard({ tweetList }) {
               </div>
             </div>
           </div>
-        )
+        );
       })}
     </div>
   );

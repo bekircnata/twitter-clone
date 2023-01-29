@@ -1,3 +1,0 @@
-Next To Do: Secili menuye active class'ı eklenecek --> OK
-Next To Do: Tweet butonuna tıklanıldığında tweetbox'ın modal hali açılacak. --> OK
-Next To Do: Uzun bir text girildiğinde kart yapısından dışarıya taşıyor.

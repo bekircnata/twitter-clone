@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
-import "./TweetBox.scss"
+import "./TweetBox.scss";
 
 import { Button } from "primereact/button";
 import { OverlayPanel } from "primereact/overlaypanel";
 import { classNames } from "primereact/utils";
-import { InputTextarea } from 'primereact/inputtextarea';
+import { InputTextarea } from "primereact/inputtextarea";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -14,7 +14,12 @@ import {
   faCalendar,
 } from "@fortawesome/free-regular-svg-icons";
 
-export default function TweetBox({ tweetList, setTweetList, type, setDisplayTweetBoxDialog }) {
+export default function TweetBox({
+  tweetList,
+  setTweetList,
+  type,
+  setDisplayTweetBoxDialog,
+}) {
   const op = useRef(null);
   const [tweetboxFocus, setTweetboxFocus] = useState(false);
   const [replyButtonId, setReplyButtonId] = useState(1);
@@ -24,7 +29,7 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
     { id: 1, icon: "pi pi-globe", label: "Everyone" },
     { id: 2, icon: "pi pi-user", label: "People you follow" },
     { id: 3, icon: "pi pi-at", label: "Only people you mention" },
-  ]
+  ];
   // Seçilen seçeneğe ait butonun ekranda görünmesi için
   const replyButtonTemplate = () => {
     let buttonTemplate = overlaypanelItems.filter(
@@ -39,10 +44,10 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
         onClick={(e) => op.current.toggle(e)}
       />
     );
-  }
+  };
 
-  const addTweet = async() => {
-    const addedTweet =  {
+  const addTweet = async () => {
+    const addedTweet = {
       Id: tweetList.length + 1,
       image: "images/profile-pic-1.jfif",
       title: "Bekir Can Ata",
@@ -53,20 +58,19 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
       reply: " ",
       retweet: " ",
       like: " ",
-    }
+    };
 
-    const tweetListArr = []
-    tweetList?.map((item) => tweetListArr.push(item) )
-    tweetListArr.unshift(addedTweet)
-    setTweetList(tweetListArr)
-    setTweetText("")
-    type === "dialog" && setDisplayTweetBoxDialog(false)
-  }
+    const tweetListArr = [];
+    tweetList?.map((item) => tweetListArr.push(item));
+    tweetListArr.unshift(addedTweet);
+    setTweetList(tweetListArr);
+    setTweetText("");
+    type === "dialog" && setDisplayTweetBoxDialog(false);
+  };
 
   return (
-    <div className={ type === "dialog" ? "tweet-box" : "tweet-box  pl-7" }>
+    <div className={type === "dialog" ? "tweet-box" : "tweet-box  pl-7"}>
       <div className="tweet-box-content">
-
         <div style={{ width: "65px" }}>
           <img
             className="circle-image"
@@ -76,15 +80,19 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
         </div>
 
         <div className="w-full">
-          <InputTextarea 
+          <InputTextarea
             autoResize
-            rows={1} 
+            rows={1}
             cols={50}
             value={tweetText}
             placeholder="What's happening?"
             onFocus={(e) => setTweetboxFocus(true)}
             onChange={(e) => setTweetText(e.target.value)}
-            style={tweetboxFocus ? { outline: "none" } : { outline: "none", whiteSpace: "normal" }}
+            style={
+              tweetboxFocus
+                ? { outline: "none" }
+                : { outline: "none", whiteSpace: "normal" }
+            }
           />
           {tweetboxFocus ? (
             <div className="mt-4">
@@ -107,12 +115,26 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
           <i className="pi pi-map-marker icon"></i>
         </div>
         <div className="flex align-items-center">
-          {
-            tweetText.length !== 0 ? (
-              <span className="mr-3 tweet-length-text" style={ tweetText.length >= 280 ? {color: "#E8222F"} : {color: "rgb(113, 118, 123)"}}>{tweetText.length}</span>
-            ) : ("")
-          }
-          <Button className="tweetle-btn" label="Tweetle" disabled={tweetText.length === 0 || tweetText.length >= 280} onClick={(e) => addTweet()} />
+          {tweetText.length !== 0 ? (
+            <span
+              className="mr-3 tweet-length-text"
+              style={
+                tweetText.length >= 280
+                  ? { color: "#E8222F" }
+                  : { color: "rgb(113, 118, 123)" }
+              }
+            >
+              {tweetText.length}
+            </span>
+          ) : (
+            ""
+          )}
+          <Button
+            className="tweetle-btn"
+            label="Tweetle"
+            disabled={tweetText.length === 0 || tweetText.length >= 280}
+            onClick={(e) => addTweet()}
+          />
         </div>
       </div>
 
@@ -145,7 +167,12 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
                       op.current.toggle(e);
                     }}
                   >
-                    <i className={classNames(item?.icon, "tweetbox-overlaypanel-icon")}></i>
+                    <i
+                      className={classNames(
+                        item?.icon,
+                        "tweetbox-overlaypanel-icon"
+                      )}
+                    ></i>
                     <span>{item?.label}</span>
                   </Button>
                 </div>
@@ -154,7 +181,6 @@ export default function TweetBox({ tweetList, setTweetList, type, setDisplayTwee
           </div>
         </OverlayPanel>
       </div>
-
     </div>
   );
 }

@@ -89,12 +89,17 @@ export default function Menu({ tweetList, setTweetList }) {
           resizable={false}
           baseZIndex={10}
           className="tweet-box-dialog"
-          style={{ width: "30vw"}}
-          headerStyle={{ padding: "5px"}}
+          style={{ width: "30vw" }}
+          headerStyle={{ padding: "5px" }}
           onHide={() => setDisplayTweetBoxDialog(false)}
         >
           <div className="tweet-box">
-            <TweetBox tweetList={tweetList} setTweetList={setTweetList} type={"dialog"} setDisplayTweetBoxDialog={setDisplayTweetBoxDialog} />
+            <TweetBox
+              tweetList={tweetList}
+              setTweetList={setTweetList}
+              type={"dialog"}
+              setDisplayTweetBoxDialog={setDisplayTweetBoxDialog}
+            />
           </div>
         </Dialog>
       </div>

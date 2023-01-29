@@ -1,94 +1,94 @@
 .menu-component {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding-right: 20px;
-    position: sticky;
-    top: 20px;
-    
-    .menu-list {
-        .menu-items {
-            .menu-link {
-                text-decoration: none;
-                &-btn {
-                    color: #fff;
-                    font-size: 22px;
-                    border-radius: 50px;
-                    transition: all 0.3s linear;
-                    &:hover {
-                        background-color: #181818;
-                        color: #fff;
-                    }
-                    .p-button-label {
-                        font-weight: 400;
-                    }
-                    .p-button-icon {
-                        font-size: 24px;
-                        margin-right: 20px
-                    }
-                }
-                &-active {
-                    .p-button-label {
-                        font-weight: bolder;
-                    }
-                }
-            }
-        }
-    }
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 20px;
+  position: sticky;
+  top: 20px;
 
-    .tweetle-btn {
-        background-color: rgb(29, 155, 240);
-        transform: all linear 0.5s;
-        width: 100%;
-        border-radius: 50px;
-        margin-top: 10px;
-        font-size: 18px;
-        &:hover {
-            background-color: rgb(26, 140, 216);
-        }
-    }
-
-    .menu-footer-container {
-        margin-top: 100%;
-        cursor: pointer;
-        transition: all 0.3s linear;
-        padding: 20px 10px;
-        width: 110%;
-        position: sticky;
-        bottom: 20px;
-        border-radius: 50px;
-        &:hover {
+  .menu-list {
+    .menu-items {
+      .menu-link {
+        text-decoration: none;
+        &-btn {
+          color: #fff;
+          font-size: 22px;
+          border-radius: 50px;
+          transition: all 0.3s linear;
+          &:hover {
             background-color: #181818;
+            color: #fff;
+          }
+          .p-button-label {
+            font-weight: 400;
+          }
+          .p-button-icon {
+            font-size: 24px;
+            margin-right: 20px;
+          }
         }
-        .menu-footer {
-            display: flex;
-            align-items: center;
-    
-            &-pic {
-                width: 40px;
-                height: 40px;
-            }
-            &-text {
-                color: #fff;
-                margin-left: 10px;
-                p {
-                    padding: 0;
-                    margin: 0;
-                }
-                .name {
-                    font-weight: 600;
-                    word-spacing: 3px;
-                }
-                .username {
-                    color: #666B6F;
-                }
-            }
-            &-icon {
-                margin-left: auto;
-                color: #fff;
-                font-size: 24px;
-            }
+        &-active {
+          .p-button-label {
+            font-weight: bolder;
+          }
         }
+      }
     }
+  }
+
+  .tweetle-btn {
+    background-color: rgb(29, 155, 240);
+    transform: all linear 0.5s;
+    width: 100%;
+    border-radius: 50px;
+    margin-top: 10px;
+    font-size: 18px;
+    &:hover {
+      background-color: rgb(26, 140, 216);
+    }
+  }
+
+  .menu-footer-container {
+    margin-top: 100%;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    padding: 20px 10px;
+    width: 110%;
+    position: sticky;
+    bottom: 20px;
+    border-radius: 50px;
+    &:hover {
+      background-color: #181818;
+    }
+    .menu-footer {
+      display: flex;
+      align-items: center;
+
+      &-pic {
+        width: 40px;
+        height: 40px;
+      }
+      &-text {
+        color: #fff;
+        margin-left: 10px;
+        p {
+          padding: 0;
+          margin: 0;
+        }
+        .name {
+          font-weight: 600;
+          word-spacing: 3px;
+        }
+        .username {
+          color: #666b6f;
+        }
+      }
+      &-icon {
+        margin-left: auto;
+        color: #fff;
+        font-size: 24px;
+      }
+    }
+  }
 }

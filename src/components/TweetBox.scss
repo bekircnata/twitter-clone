@@ -1,5 +1,4 @@
 .tweet-box {
-
   &-content {
     margin-top: 20px;
     display: flex;
@@ -52,39 +51,39 @@
 }
 
 .tweetbox-overlaypanel {
-    padding-left: 20px;
-    .overlaypanel-header {
-        h6 {
-            padding: 0;
-            padding-top: 20px;
-            margin: 0;
-            color: #fff;
-        }
-        p {
-            margin-top: 5px;
-        }
+  padding-left: 20px;
+  .overlaypanel-header {
+    h6 {
+      padding: 0;
+      padding-top: 20px;
+      margin: 0;
+      color: #fff;
     }
-    .overlaypanel-content {
-        margin-top: 15px !important;
-        .overlaypanel-items {
-            padding: 10px 0 !important;
-            &:hover {
-                background-color: #16181C !important;
-            }
-        }
+    p {
+      margin-top: 5px;
     }
+  }
+  .overlaypanel-content {
+    margin-top: 15px !important;
+    .overlaypanel-items {
+      padding: 10px 0 !important;
+      &:hover {
+        background-color: #16181c !important;
+      }
+    }
+  }
 
-    &-icon {
-        background-color: #1D9BF0;
-        padding: 10px;
-        border-radius: 50%;
-        margin-right: 10px;
-    }
+  &-icon {
+    background-color: #1d9bf0;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 }
 
 .tweet-box-dialog {
-    .p-dialog-header, .p-dialog-content {
-        background-color: #000 !important;
-      }
-
+  .p-dialog-header,
+  .p-dialog-content {
+    background-color: #000 !important;
+  }
 }

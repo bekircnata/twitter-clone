@@ -1,10 +1,9 @@
-import React from "react"
-import TweetBox from "../components/TweetBox"
-import TweetCard from "../components/home/TweetCard"
-import "./Home.scss"
+import React from "react";
+import TweetBox from "../components/TweetBox";
+import TweetCard from "../components/home/TweetCard";
+import "./Home.scss";
 
 export default function Home({ tweetList, setTweetList }) {
-
   return (
     <div className="home-page h-full">
       <div className="tweet-box-header">
@@ -17,5 +16,5 @@ export default function Home({ tweetList, setTweetList }) {
         <TweetCard tweetList={tweetList} />
       </div>
     </div>
-  )
+  );
 }

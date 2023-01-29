@@ -1,34 +1,34 @@
 .circle-image {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
- // - GLOBAL INPUT TEXT
+// - GLOBAL INPUT TEXT
 .global-input-text {
-    &:enabled:focus {
-        box-shadow: none;
-    }
+  &:enabled:focus {
+    box-shadow: none;
+  }
 }
 
 // - GLOBAL BUTTONS
 .global-text-button {
-    &:hover {
-        background-color: inherit !important;
-        color: #fff !important;
-    }
+  &:hover {
+    background-color: inherit !important;
+    color: #fff !important;
+  }
 }
 .three-dot-button {
-    color: rgb(113, 118, 123) !important;
-    &:hover {
-        color: #1D6494 !important;
-    }
+  color: rgb(113, 118, 123) !important;
+  &:hover {
+    color: #1d6494 !important;
+  }
 }
 .show-more-button {
-    color: #1E8DD8 !important;
-    display: flex;
+  color: #1e8dd8 !important;
+  display: flex;
 }
-.p-button, .p-inputtext  {
-    box-shadow: none !important;
+.p-button,
+.p-inputtext {
+  box-shadow: none !important;
 }

@@ -2,7 +2,6 @@ import { Button } from "primereact/button";
 import React from "react";
 
 export default function WhoToFollowCard() {
-
   const whoToFollowListItem = [
     {
       Id: 1,
@@ -25,30 +24,35 @@ export default function WhoToFollowCard() {
   ];
 
   const buttonEventListener = (event) => {
-    console.log(event)
-    let element = event.target.nodeName === "SPAN" ? event.target.parentElement : event.target
-    let isFollow = ""
-    let isUnfollow = ""
+    console.log(event);
+    let element =
+      event.target.nodeName === "SPAN"
+        ? event.target.parentElement
+        : event.target;
+    let isFollow = "";
+    let isUnfollow = "";
 
-    isFollow = element.classList.contains("follow-btn")
-    isUnfollow = element.classList.contains("unfollow-btn")
+    isFollow = element.classList.contains("follow-btn");
+    isUnfollow = element.classList.contains("unfollow-btn");
 
-    if(isFollow) {
-      element.classList.remove("follow-btn")
-      element.classList.add("unfollow-btn")
-      event.target.nodeName === "SPAN" ? event.target.innerText = "Unfollow" : event.target.lastElementChild.innerText = "Unfollow"
+    if (isFollow) {
+      element.classList.remove("follow-btn");
+      element.classList.add("unfollow-btn");
+      event.target.nodeName === "SPAN"
+        ? (event.target.innerText = "Unfollow")
+        : (event.target.lastElementChild.innerText = "Unfollow");
       // Element değişkeni kullanıldığınında innerText, innerHtml, textContent gibi event parametrelerine ulaşılamıyordu. Bu yüzden tekrardan event.target... kullanıldı.
-
-    } else if(isUnfollow) {
-      element.classList.remove("unfollow-btn")
-      element.classList.add("follow-btn")
-      event.target.nodeName === "SPAN" ? event.target.innerText = "Follow" : event.target.lastElementChild.innerText = "Follow"
+    } else if (isUnfollow) {
+      element.classList.remove("unfollow-btn");
+      element.classList.add("follow-btn");
+      event.target.nodeName === "SPAN"
+        ? (event.target.innerText = "Follow")
+        : (event.target.lastElementChild.innerText = "Follow");
     }
-  }
+  };
 
   return (
     <div>
-
       <div className="who-to-follow-title">
         <h3>Who to follow</h3>
       </div>
@@ -66,7 +70,11 @@ export default function WhoToFollowCard() {
                 <div className="list-item-text-group-name">{item?.name}</div>
                 <div className="list-item-text-group-email">{item?.email}</div>
               </div>
-              <Button className="list-item-button follow-btn" label="Follow" onClick={(e) => buttonEventListener(e)} />
+              <Button
+                className="list-item-button follow-btn"
+                label="Follow"
+                onClick={(e) => buttonEventListener(e)}
+              />
             </li>
           );
         })}
@@ -76,7 +84,6 @@ export default function WhoToFollowCard() {
         className="p-button-text w-full show-more-button"
         label="Show more"
       />
-
     </div>
   );
 }

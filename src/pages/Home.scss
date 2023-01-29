@@ -1,17 +1,17 @@
 .home-page {
-    margin: 0;
-    padding: 0;
-    border-right: 1px solid #2f3336;
-    border-left: 1px solid #2f3336;
-    height: 150vh;
+  margin: 0;
+  padding: 0;
+  border-right: 1px solid #2f3336;
+  border-left: 1px solid #2f3336;
+  height: 150vh;
 
-    .tweet-box-header {
-        background-color: #010305;
-        position: sticky;
-        top: 0;
-        padding: 20px;
-        h2 {
-            margin: 0;
-        }
+  .tweet-box-header {
+    background-color: #010305;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    h2 {
+      margin: 0;
     }
+  }
 }
